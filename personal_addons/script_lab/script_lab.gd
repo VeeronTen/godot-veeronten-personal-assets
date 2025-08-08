@@ -1,10 +1,11 @@
 @tool 
 extends EditorScript 
 
-func _process(delta: float) -> void: 
+func _process(_delta: float) -> void: 
 	assert(false, "the lab have to be used only with func _run()")
 
 # Windows: Ctrl + Shift + X
-# Mac: TODO
+# TODO Mac shortcut
+
 func _run():
 	pass
