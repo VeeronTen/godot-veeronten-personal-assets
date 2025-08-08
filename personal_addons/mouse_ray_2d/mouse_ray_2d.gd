@@ -1,4 +1,4 @@
-@icon("res://addons/veeronten/mouse_ray_2d/mouse_ray_2d_icon.svg")
+@icon("res://personal_addons/mouse_ray_2d/mouse_ray_2d_icon.svg")
 class_name MouseRay2D 
 extends RayCast2D
 ## A ray to cast from and to the mouse position
