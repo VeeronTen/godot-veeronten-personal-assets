@@ -642,7 +642,7 @@ func simulate(obj, times, delta, check_is_processing: bool = false):
 ## [br]
 ## The node that was replaced is queued to be freed.
 ## [br]
-## TODO see replace_by method, this could simplify the logic here.
+## TODOx see replace_by method, this could simplify the logic here.
 # ------------------------------------------------------------------------------
 func replace_node(base_node, path_or_node, with_this):
 	var path = path_or_node

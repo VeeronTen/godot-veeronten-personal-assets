@@ -52,7 +52,7 @@ class InputQueueItem:
 
 	signal event_ready
 
-	# TODO should this be done in _physics_process instead or should it be
+	# TODOx should this be done in _physics_process instead or should it be
 	# configurable?
 	func _physics_process(delta):
 		if(frame_delay > 0 and _delay_started):

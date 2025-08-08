@@ -86,7 +86,7 @@ func _write_results_for_gut_panel():
 		push_error('Could not save bbcode, result = ', FileAccess.get_open_error())
 
 	var exporter = ResultExporter.new()
-	# TODO this should be checked and _wrote_results should maybe not be set, or
+	# TODOx this should be checked and _wrote_results should maybe not be set, or
 	# maybe we do not care.  Whichever, it should be clear.
 	var _f_result = exporter.write_json_file(gut, result_json_path)
 	_wrote_results = true

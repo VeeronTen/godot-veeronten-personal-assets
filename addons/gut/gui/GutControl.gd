@@ -52,7 +52,7 @@ func _ready():
 	_ctrls.test_tree.hide_root = true
 	add_child(_gut_runner)
 
-	# TODO This might not need to be called deferred after changing GutUtils to
+	# TODOx This might not need to be called deferred after changing GutUtils to
 	# an all static class.
 	call_deferred('_post_ready')
 

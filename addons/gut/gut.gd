@@ -62,7 +62,7 @@ var log_level = _log_level:
 	get: return _log_level
 	set(val): _set_log_level(val)
 
-# TODO 4.0
+# TODOx 4.0
 # This appears to not be used anymore.  Going to wait for more tests to be
 # ported before removing.
 var _disable_strict_datatype_checks = false
@@ -86,7 +86,7 @@ var include_subdirectories = _include_subdirectories :
 
 
 var _double_strategy = GutUtils.DOUBLE_STRATEGY.SCRIPT_ONLY
-# TODO rework what this is and then document it here.
+# TODOx rework what this is and then document it here.
 var double_strategy = _double_strategy  :
 	get: return _double_strategy
 	set(val):
@@ -252,7 +252,7 @@ var _pause_before_teardown = false
 # prevents tests from being run if they were exported and ensures that the
 # error displayed is seen since importing generates a lot of text.
 #
-# TODO this appears to only be checked and never set anywhere.  Verify that this
+# TODOx this appears to only be checked and never set anywhere.  Verify that this
 # was not broken somewhere and remove if no longer used.
 var _cancel_import = false
 
@@ -748,7 +748,7 @@ func _test_the_scripts(indexes=[]):
 		# ----
 
 		# !!!
-		# Hack so there isn't another indent to this monster of a method.  if
+		# Hackx so there isn't another indent to this monster of a method.  if
 		# inner class is set and we do not have a match then empty the tests
 		# for the current test.
 		# !!!
