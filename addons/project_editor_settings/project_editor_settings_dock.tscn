@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvun27c8a874m"]
+
+[ext_resource type="Script" uid="uid://bxr7dl0kxk6rt" path="res://addons/project_editor_settings/project_editor_settings_dock.gd" id="1_5o25o"]
+
+[node name="Project Editor Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5o25o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelEditorSettings" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "EditorSettings"
+
+[node name="ButtonEnbableCodeFontContextualLigatures" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Enbable code font contextual ligatures (cool arrows instead of ->, etc.)"
+autowrap_mode = 3
+
+[node name="LabelProjectSettings" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "ProjectSettings"
+
+[node name="ButtonEnbableAllGdscriptWarnings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Enbable all GDScript Warnings"
+autowrap_mode = 3
+
+[node name="LabelDivider" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "
+
+"
+
+[node name="ButtonClosePlugin" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+Close Plugin
+
+"
+autowrap_mode = 3
+
+[connection signal="pressed" from="VBoxContainer/ButtonEnbableCodeFontContextualLigatures" to="." method="_on_button_enbable_code_font_contextual_ligatures_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonEnbableAllGdscriptWarnings" to="." method="_on_button_enbable_all_gdscript_warnings_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonClosePlugin" to="." method="_on_button_close_plugin_pressed"]
