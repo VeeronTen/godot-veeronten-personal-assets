@@ -29,6 +29,11 @@ layout_mode = 2
 text = "Enbable code font contextual ligatures (cool arrows instead of ->, etc.)"
 autowrap_mode = 3
 
+[node name="ButtonEnableScriptAutoSaveEverySecond" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Enbable script autosave every second"
+autowrap_mode = 3
+
 [node name="LabelProjectSettings" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -55,5 +60,6 @@ Close Plugin
 autowrap_mode = 3
 
 [connection signal="pressed" from="VBoxContainer/ButtonEnbableCodeFontContextualLigatures" to="." method="_on_button_enbable_code_font_contextual_ligatures_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonEnableScriptAutoSaveEverySecond" to="." method="_on_button_enable_script_auto_save_every_second_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonEnbableAllGdscriptWarnings" to="." method="_on_button_enbable_all_gdscript_warnings_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonClosePlugin" to="." method="_on_button_close_plugin_pressed"]

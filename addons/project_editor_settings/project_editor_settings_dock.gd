@@ -3,12 +3,16 @@ extends Control
 
 signal on_button_close_plugin_pressed
 const EDITOR_SETTING_NAME_CODE_FONT_CONTEXTUAL_LIGATURES = "interface/editor/code_font_contextual_ligatures"
+const EDITOR_SETTING_NAME_AUTOSAVE_SCRIPTS_INTERVAL_SECS = "text_editor/behavior/files/autosave_interval_secs"
 const PROJECT_SETTING_NAME_PATTERN_GDSCRIPT_WARNINGS = "gdscript/warnings/"
 var _editor_settings = EditorInterface.get_editor_settings()
 
 func _on_button_enbable_code_font_contextual_ligatures_pressed() -> void:
 	_set_editor_setting_and_log(EDITOR_SETTING_NAME_CODE_FONT_CONTEXTUAL_LIGATURES, 0)
 
+func _on_button_enable_script_auto_save_every_second_pressed() -> void:
+	_set_editor_setting_and_log(EDITOR_SETTING_NAME_AUTOSAVE_SCRIPTS_INTERVAL_SECS, 1)
+	
 func _on_button_enbable_all_gdscript_warnings_pressed() -> void:
 	var warning_project_settings = ProjectSettings.get_property_list().filter(
 		func(setting): return PROJECT_SETTING_NAME_PATTERN_GDSCRIPT_WARNINGS in setting.name
