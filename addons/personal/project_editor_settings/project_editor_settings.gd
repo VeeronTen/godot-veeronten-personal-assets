@@ -17,5 +17,3 @@ func _exit_tree():
 func _remove_dock():
 	remove_control_from_docks(_dock)
 	_dock.queue_free()
-
-#TODO написать всему тесты

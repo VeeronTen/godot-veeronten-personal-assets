@@ -45,5 +45,3 @@ func _log_change(name: String, prev_value: Variant, new_value: Variant):
 		print(name, "\n\t", prev_value, " -> ", new_value)
 	else:
 		print(name, "\n\twas NOT chnaged, still ", new_value)
-
-#TODO описать все мои ассеты в ридми
