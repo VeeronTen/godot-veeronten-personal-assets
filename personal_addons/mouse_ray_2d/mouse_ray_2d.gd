@@ -4,24 +4,23 @@ class_name MouseRay2D
 extends RayCast2D
 ## A ray to cast from and to the mouse position
 
-var _restrictions = [
-	[func(): return target_position == Vector2.ZERO, "`target_position` as mouse offset have to be 0"],
-	[func(): return hit_from_inside, "the ray length is 0, so it has to `hit_from_inside`"]
-]
+var _restrictions: Restrictions = Restrictions.new()
 
-func _get_configuration_warnings():
-	return _restrictions.filter(
-		func(restriction): return not restriction[0].call()
-	).map(
-		func(restriction): return restriction[1]
-	)
+func _process(_delta: float) -> void:
+	if Engine.is_editor_hint():
+		target_position = Vector2.ZERO
+		hit_from_inside = true
+		update_configuration_warnings()
 	
 func cast() -> String:
-	_cast_assertions()
+	if _restrictions.is_any_violated([
+		Restriction.new(func() -> bool: 	return target_position == Vector2.ZERO, "`target_position` as mouse offset have to be 0"), 
+		Restriction.new(func() -> bool: return hit_from_inside, "the ray length is 0, so it has to `hit_from_inside`")
+	]): return ""
 	global_position = get_global_mouse_position()
 	force_raycast_update()
-	return get_collider().name if is_colliding() else ""
-		
-func _cast_assertions() -> void:
-	for restriction in _restrictions:
-		assert(restriction[0].call(), restriction[1])
+	if is_colliding():
+		var node = get_collider() as Node2D
+		return str(node.name)  
+	else:
+		return ""
