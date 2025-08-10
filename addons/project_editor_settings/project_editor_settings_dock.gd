@@ -8,8 +8,7 @@ var _editor_settings = EditorInterface.get_editor_settings()
 
 func _on_button_enbable_code_font_contextual_ligatures_pressed() -> void:
 	_set_editor_setting_and_log(EDITOR_SETTING_NAME_CODE_FONT_CONTEXTUAL_LIGATURES, 0)
-#TODO перезапустить проект после настроек
-	
+		
 func _on_button_enbable_all_gdscript_warnings_pressed() -> void:
 	var warning_project_settings = ProjectSettings.get_property_list().filter(
 		func(setting): return PROJECT_SETTING_NAME_PATTERN_GDSCRIPT_WARNINGS in setting.name
@@ -28,6 +27,7 @@ func _on_button_enbable_all_gdscript_warnings_pressed() -> void:
 	ProjectSettings.save()
 
 func _on_button_close_plugin_pressed() -> void:
+	push_warning("Don't forget to reload project to get rid of UNDO risk")
 	on_button_close_plugin_pressed.emit()
 
 func _set_editor_setting_and_log(setting: String, new_value: Variant):
