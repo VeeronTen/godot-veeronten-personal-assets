@@ -28,15 +28,7 @@ gdscript/warnings/return_value_discarded=1
 
 enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/gut/plugin.cfg")
 
-[files]
-
-autosave_interval_secs=1
-
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-
-[text_editor]
-
-behavior/files/autosave_interval_secs=1
