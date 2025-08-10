@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cvun27c8a874m"]
 
-[ext_resource type="Script" uid="uid://bxr7dl0kxk6rt" path="res://addons/project_editor_settings/project_editor_settings_dock.gd" id="1_5o25o"]
+[ext_resource type="Script" uid="uid://bxr7dl0kxk6rt" path="res://addons/personal/project_editor_settings/project_editor_settings_dock.gd" id="1_5o25o"]
 
 [node name="Project Editor Settings" type="Control"]
 layout_mode = 3

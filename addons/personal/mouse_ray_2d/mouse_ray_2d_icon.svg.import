@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgs010imk4t8r"
-path="res://.godot/imported/pixel.png-1915895077178c8948ff29dcb9af069e.ctex"
+uid="uid://do22s5nde3h7d"
+path="res://.godot/imported/mouse_ray_2d_icon.svg-1db3a11ce1a56cd9e728a4f72236f67a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personal_addons/pixel/pixel.png"
-dest_files=["res://.godot/imported/pixel.png-1915895077178c8948ff29dcb9af069e.ctex"]
+source_file="res://addons/personal/mouse_ray_2d/mouse_ray_2d_icon.svg"
+dest_files=["res://.godot/imported/mouse_ray_2d_icon.svg-1db3a11ce1a56cd9e728a4f72236f67a.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

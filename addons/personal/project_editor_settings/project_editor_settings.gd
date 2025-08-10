@@ -1,13 +1,13 @@
 @tool
 extends EditorPlugin
 
-const _PROJECT_EDITOR_SETTINGS_DOCK = preload("res://addons/project_editor_settings/project_editor_settings_dock.tscn")
+const _PROJECT_EDITOR_SETTINGS_DOCK = preload("res://addons/personal/project_editor_settings/project_editor_settings_dock.tscn")
 var _dock
 
 func _enter_tree():
 	_dock = _PROJECT_EDITOR_SETTINGS_DOCK.instantiate()
 	_dock.on_button_close_plugin_pressed.connect(
-		func(): get_editor_interface().set_plugin_enabled("project_editor_settings", false)
+		func(): get_editor_interface().set_plugin_enabled("personal/project_editor_settings", false)
 	)
 	add_control_to_dock(DOCK_SLOT_LEFT_UL, _dock)
 
